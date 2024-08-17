@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+}
+.shadow-bottom {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.inter {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  color: rgb(44, 44, 44);
+}
+h1 {
+  animation-name: h-load;
+  animation-duration: 150ms;
+  animation-timing-function: ease-in;
+  animation-delay: 500ms;
+  animation-fill-mode: forwards;
+  transform: translateX(-1000%);
+}
+
+p,
+h2,
+a,
+img {
+  animation: p-load 300ms ease-in 300ms;
+  animation-fill-mode: forwards;
+  transform: translateY(-20px);
+  opacity: 0;
+}
+.dark-blue {
+  color: darkblue !important;
+}
+.underline-effect:hover {
+  border-bottom: 2px solid darkblue;
+}
+.underline-effect i:hover {
+  color: darkblue;
+}
+.section-1,
+.section-3 {
+  background-color: white;
+}
+.medium-text {
+  font-size: 42px;
+}
+.big-text {
+  font-size: 48px;
+}
+.light-color-text {
+  color: #8a8a8a;
+}
+.btn-hover:hover {
+  border: 1px solid darkblue;
+  color: darkblue;
+}
+.section-2 {
+  background-color: rgb(239, 239, 239);
+}
+@keyframes p-load {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes h-load {
+  0% {
+    transform: translateX(-1000%);
+  }
+
+  90% {
+    transform: translateX(50%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
